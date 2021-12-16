@@ -1,4 +1,4 @@
-[
+const all = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -141,7 +141,7 @@ filter.addEventListener('change', function () {
 	}
 	else if (filter.value == 'animal') {
 		container.innerHTML = '';
-		animali.forEach((element) => {
+		animal.forEach((element) => {
 			container.innerHTML += boxsize(element);
 		});
 	}
@@ -159,3 +159,14 @@ filter.addEventListener('change', function () {
 	}
 });
 
+function boxsize(element) {
+	const card = `
+        <div class="box">
+			<div class="icons">
+				<i class="${element.family} ${element.prefix}${element.name}" style="color:${element.color}"></i>
+				<h2>${element.name}</h2>
+			</div>
+        </div>
+        `;
+	return card;
+}
