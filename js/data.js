@@ -113,3 +113,16 @@
 	}
 ];
 
+const container = document.querySelector(".content");
+let filter = document.getElementById('filter');
+
+let animal = all.filter((element) => {
+	return element.type == "animal";
+});
+let verdure = all.filter((element) => {
+	return element.type == "vegetable";
+});
+let utenti = all.filter((element) => {
+	return element.type == "user";
+});
+
